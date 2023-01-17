@@ -40,6 +40,12 @@ export default class Book {
     const books = this.#getBooks();
     const booksContainer = document.querySelector('.books');
     booksContainer.innerHTML = '';
+
+    if (books.length === 0) {
+      booksContainer.innerHTML = 'No book available for now';
+      return;
+    }
+
     for (let i = 0; i < books.length; i += 1) {
       booksContainer.innerHTML += `
           <div id="book-${i}" class="book">
