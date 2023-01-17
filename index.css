@@ -82,6 +82,7 @@ a:hover {
   padding: 5px;
   color: red;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .form-section {
