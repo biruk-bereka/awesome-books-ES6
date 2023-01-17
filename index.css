@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 20px 30px;
+}
+
+main {
+  background-color: rgb(42, 2, 15);
+}
+
+section {
+  color: white;
+  height: calc(100vh - 8rem);
+  margin: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navLinks li {
+  list-style: none;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+a:hover {
+  color: green;
+}
+
+.date {
+  text-align: end;
+  margin: 5px 0;
+}
+
+.header-title {
+  color: rgba(8, 243, 8, 0.738);
+  margin: 20px;
+}
+
+.active {
+  color: green;
+}
+
+.books-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.books {
+  margin: 20px;
+}
+
+.book {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px 10px;
+}
+
+.book:nth-child(2n+1) {
+  background-color: rgb(14, 13, 13);
+}
+
+.remove {
+  padding: 5px;
+  color: red;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.form-section {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.form input {
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.form h3 {
+  margin: 20px 0;
+}
+
+.add {
+  color: rgb(228, 236, 228);
+  font-size: 20px;
+  border: none;
+  background-color: rgb(2, 158, 127);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 1rem;
+}
+
+.invisible {
+  display: none;
+}
+
+footer {
+  color: white;
+  padding: 10px;
+  background-color: black;
+}
