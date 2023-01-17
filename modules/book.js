@@ -1,4 +1,4 @@
-import { setToLocalStorage, getFromLocalStorage } from "./updateBooks.js";
+import { setToLocalStorage, getFromLocalStorage } from './updateBooks.js';
 
 export default class Book {
   constructor() {
@@ -17,18 +17,17 @@ export default class Book {
 
   addBook() {
     const newBook = {
-      title: document.getElementById("title").value,
-      author: document.getElementById("author").value,
+      title: document.getElementById('title').value,
+      author: document.getElementById('author').value,
     };
     this.updatedBooksStorge(newBook);
     this.displayBook();
-    document.getElementById("title").value = "";
-    document.getElementById("author").value = "";
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   }
 
   deleteBook = (bookIndex) => {
     let bookUpdated;
-    console.log("bookIndex", bookIndex);
     if (bookIndex !== null) {
       const books = this.#getBooks();
       bookUpdated = books.filter((book, index) => index !== Number(bookIndex));
@@ -39,8 +38,8 @@ export default class Book {
 
   displayBook = () => {
     const books = this.#getBooks();
-    const booksContainer = document.querySelector(".books");
-    booksContainer.innerHTML = "";
+    const booksContainer = document.querySelector('.books');
+    booksContainer.innerHTML = '';
     for (let i = 0; i < books.length; i += 1) {
       booksContainer.innerHTML += `
           <div id="book-${i}" class="book">
@@ -49,9 +48,9 @@ export default class Book {
           </div>
           `;
     }
-    const removeButton = document.querySelectorAll(".remove");
+    const removeButton = document.querySelectorAll('.remove');
     removeButton.forEach((btn) => {
-      btn.addEventListener("click", () => this.deleteBook(btn.dataset.index));
+      btn.addEventListener('click', () => this.deleteBook(btn.dataset.index));
     });
   };
 }
